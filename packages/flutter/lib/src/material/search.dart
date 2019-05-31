@@ -460,12 +460,14 @@ class _SearchPageState<T> extends State<_SearchPage<T>> {
             focusNode: focusNode,
             style: theme.textTheme.title,
             textInputAction: TextInputAction.search,
+            cursorColor: theme.cursorColor,
             onSubmitted: (String _) {
               widget.delegate.showResults(context);
             },
             decoration: InputDecoration(
               border: InputBorder.none,
               hintText: searchFieldLabel,
+              hintStyle: theme.inputDecorationTheme.hintStyle
             ),
           ),
           actions: widget.delegate.buildActions(context),
